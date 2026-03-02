@@ -12,27 +12,27 @@ export default function Navbar() {
     <nav className="bg-[#CDECE3] py-4 px-6 md:px-12 sticky top-0 z-50 ">
       <div className="max-w-7xl mx-auto flex justify-center items-center">
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-16 text-base font-medium text-[#2E6F5E] justify-center">
-          <Link href="#" className="hover:text-[#1b4332] transition-colors">
+        <div className="hidden md:flex items-center gap-16 text-base font-medium text-[#2E6F5E] justify-center uppercase">
+          <Link href="/" className="hover:text-[#1b4332] transition-colors">
             HOME
           </Link>
-          <Link href="#" className="hover:text-[#1b4332] transition-colors flex items-center gap-1">
+          <Link href="/aanbod" className="hover:text-[#1b4332] transition-colors flex items-center gap-1">
             AANBOD <span className="text-xs">▼</span>
           </Link>
-          <Link href="#" className="hover:text-[#1b4332] transition-colors">
+          <Link href="/gratis" className="hover:text-[#1b4332] transition-colors">
             GRATIS
           </Link>
           <Link href="/" className="flex items-center gap-2">
             <Image src="/img/logo.webp" alt="Logo Mathia.nl" width={80} height={80} />
           </Link>
-          <Link href="#" className="hover:text-[#1b4332] transition-colors">
+          <Link href="/contact" className="hover:text-[#1b4332] transition-colors">
             CONTACT
           </Link>
-          <Link href="#" className="hover:text-[#1b4332] transition-colors">
+          <Link href="/blogs" className="hover:text-[#1b4332] transition-colors">
             OVER MATHIA.NL
           </Link>
-          <Link href="#" className="hover:text-[#1b4332] transition-colors">
-            OVER MATHIA.NL
+          <Link href="https://calendly.com/mathiatv/30min" className="transition-colors bg-[#2E6F5E] text-white px-6 py-2 rounded-md text-sm font-medium shadow-md mt-2" target="_blank">
+            Afspraak Maken
           </Link>
         </div>
 

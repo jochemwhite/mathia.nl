@@ -1,23 +1,73 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
+import CompanyCard from "./cards/review-card";
+import { Marquee } from "./ui/marquee";
+import ChevronSection from "./layout/ChevronSection";
+
+const companies = [
+  {
+    company: "Red Bull",
+    href: "https://www.redbull.com/nl-nl",
+    img: "https://mathia.nl/wp-content/uploads/2024/02/red-bull.png",
+  },
+  {
+    company: "Context Consultancy",
+    href: "https://context-consultancy.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2024/02/Context-Consultancy.jpg-1-1.png",
+  },
+  {
+    company: "Lengua Viva",
+    href: "https://www.lenguaviva.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2025/05/Logo_LengiaViva-07-1024x845.png",
+  },
+  {
+    company: "Birdwatcher Group",
+    href: "https://www.birdwatchergroup.com/",
+    img: "https://mathia.nl/wp-content/uploads/2024/08/BWG_logo_dark-orange.png",
+  },
+  {
+    company: "De Federatie",
+    href: "https://www.defederatie.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2024/02/Logo_DeFederatie.png",
+  },
+  {
+    company: "Bremax Bouw",
+    href: "https://www.bremaxbouw.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2024/02/Logo-Bremax-2-1024x586.png",
+  },
+  {
+    company: "Redtail Services",
+    href: "https://redtailservices.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2025/05/Redtail-Services_10_final_08012019.bmp",
+  },
+  {
+    company: "Niveau VBS",
+    href: "https://www.niveau-vbs.nl/",
+    img: "https://mathia.nl/wp-content/uploads/2025/05/Niveau-logo-1024x196.png",
+  },
+  {
+    company: "Durven Zijn",
+    href: "https://www.durvenzijn.nu/",
+    img: "https://mathia.nl/wp-content/uploads/elementor/thumbs/PP-Murraij-boek-3d-schaduw-2-1-rjq90i1oybb8uepqq3uvsc26f0oxd8httphe5cto8w.png",
+  },
+];
 
 export default function TrustedBySection() {
   return (
-    <section className="bg-[#F9C8B8] py-20 px-6 md:px-12 relative z-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
-        <h2 className="text-[#8B3A4C] font-bold uppercase tracking-widest text-sm md:text-lg whitespace-nowrap">
-          VERTROUWD DOOR
-        </h2>
-        
-        <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-          {/* Mock Logos */}
-          <div className="font-serif font-bold text-2xl text-[#8B3A4C]">NIVEAU</div>
-          <div className="font-sans font-black text-3xl text-[#8B3A4C] italic">DURVEN</div>
-          <div className="relative w-12 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs transform rotate-12 shadow-lg">
-            Red Bull
+    <section className="bg-[#86324C]">
+      <ChevronSection pointAt="top" sideDepth={50} pointPosition={70} height="50vh" overlap="-200px" className="bg-[#F9C8B8] px-6 md:px-12 relative z-20 flex items-end pb-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-start gap-12 w-full">
+          <h2 className="text-[#8B3A4C] text-center font-bold uppercase tracking-widest text-3xl whitespace-nowrap">VERTROUWD DOOR</h2>
+
+          <div className="flex-1 overflow-hidden">
+            <Marquee pauseOnHover className="[--duration:20s]">
+              {companies.map((company) => (
+                <CompanyCard key={company.company} img={company.img} name={company.company} href={company.href} />
+              ))}
+            </Marquee>
           </div>
-          <div className="font-mono font-bold text-xl text-[#8B3A4C]">THE VALLUE</div>
         </div>
-      </div>
+      </ChevronSection>
     </section>
   );
 }

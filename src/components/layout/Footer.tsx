@@ -1,15 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-[#CDECE3] py-20 px-6 md:px-12">
+    <footer className="bg-[#CDECE3] py-4 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
         {/* Logo Column */}
         <div className="col-span-1 md:col-span-1">
-          <div className="flex flex-col items-start gap-4">
-            <div className="relative w-20 h-20 bg-[#2E6F5E] rounded-full flex items-center justify-center text-white font-bold text-4xl mb-4">M</div>
-            <span className="font-bold text-[#1b4332] text-2xl tracking-wider">MATHIA.NL</span>
-          </div>
+          <Image src="/img/logo.webp" alt="Logo" width={200} height={100} />
         </div>
 
         {/* Contact Column */}
@@ -18,7 +17,7 @@ export default function Footer() {
           <ul className="space-y-4 text-[#2E6F5E]/80">
             <li>
               <a href="mailto:contact@mathia.nl" className="hover:text-[#1b4332]">
-                contact [at] mathia [punt] nl
+                contact@mathia.nl
               </a>
             </li>
             <li>
@@ -82,9 +81,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-[#2E6F5E]/10 text-center text-[#2E6F5E]/60 text-sm">
+      <div className="max-w-7xl mx-auto mt-10 pt-4 border-t border-[#2E6F5E]/10 text-center text-[#2E6F5E]/60 text-sm flex flex-row justify-between">
+        <p>Copyright © {currentYear} Mathia.nl</p>
+
         <p>
-          Copyright © 2026 Mathia.nl | Aangedreven door <span className="text-[#FF7F50]">Astra WordPress thema</span>
+          build by{" "}
+          <Link href="https://amrio.nl" target="_blank" className="hover:text-[#1b4332]">
+            Amrio
+          </Link>
         </p>
       </div>
     </footer>
