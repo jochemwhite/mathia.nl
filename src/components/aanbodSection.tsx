@@ -6,9 +6,9 @@ export default function AanbodSection() {
     <section className="max-w-7xl mx-auto">
       <div className="flex items-center justify-center gap-12">
         <div>
-          <h1 className="text-4xl font-bold">Meer weter over onze diensten?</h1>
+          <h1 className="text-4xl font-semibold text-primary">Meer weter over onze diensten?</h1>
 
-          <div className="space-y-8 text-xl mt-8">
+          <div className="space-y-8  mt-8 text-primary">
             <p>
               Wij zijn er voor alles wat met social media te maken heeft! Of je nu hulp zoekt met het beheren van je accounts, toffe content wilt laten maken, of gewoon wat handige tips nodig hebt om
               zelf aan de slag te gaan: wij helpen je graag.
@@ -21,7 +21,7 @@ export default function AanbodSection() {
 
             <p>
               Liever zelf aan de slag? We geven ook
-              <Link href="/linkedin-training" className="underline text-[#ff5600]">
+              <Link href="/linkedin-training" className="underline text-secondary-accent">
                 {" "}
                 trainingen{" "}
               </Link>{" "}
@@ -30,11 +30,12 @@ export default function AanbodSection() {
 
             <p>
               Of je nu
-              <Link href="/social-media-management" className="underline text-[#ff5600]">
+              <Link href="/social-media-management" className="underline text-secondary-accent">
+                {" "}
                 alles uit handen wilt geven{" "}
               </Link>{" "}
               of{" "}
-              <Link href="/strategie-sessies" className="underline text-[#ff5600]">
+              <Link href="/strategie-sessies" className="underline text-secondary-accent">
                 af en toe wat ondersteuning nodig hebt{" "}
               </Link>
               , wij staan voor je klaar. Samen tillen we jouw social media naar een hoger niveau!

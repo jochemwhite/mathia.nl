@@ -76,7 +76,7 @@ export default function PricingSection() {
         <div className="text-center mb-16">
           <div>
             <span className="lato inline-block text-xs font-bold uppercase tracking-[0.25em] text-green-700 bg-green-100 px-4 py-1.5 rounded-full mb-5">Diensten &amp; Tarieven</span>
-            <h1 className="sora text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
+            <h1 className="sora text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-5">
               Investeer in jouw
               <br />
               <span>social media groei</span>
@@ -96,10 +96,10 @@ export default function PricingSection() {
 
         {/* Bottom note */}
         <div className="text-center mt-16">
-          <p className="lato text-sm text-gray-400">
+          <p className="lato text-sm text-primary">
             Twijfel je welk pakket het beste bij jou past?{" "}
             <Link href="https://calendly.com/mathiatv/30min" target="_blank">
-              <button className="text-green-700 font-semibold hover:underline transition-all cursor-pointer">Plan een gratis kennismakingsgesprek</button>
+              <button className="text-secondary-accent font-semibold hover:underline transition-all cursor-pointer">Plan een gratis kennismakingsgesprek</button>
             </Link>
             .
           </p>

@@ -31,42 +31,52 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <div className="min-h-screen flex items-center justify-center  px-6 py-20 max-w-7xl mx-auto">
-      <div className="flex flex-col items-center justify-center w-1/2">
-        <div>
-          <Image src="https://mathia.nl/wp-content/uploads/2025/09/uitbesteden-social-media-768x767.png" alt="website-foto-SCA-promo" width={500} height={960} priority className="rounded-xl" />
-
-          <Link href="https://calendly.com/mathiatv/30min" target="_blank" className="flex justify-end mt-4 w-full">
-            <button className="bg-[#FF7F50] text-white px-4 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md cursor-pointer">Plan je gratis kennismakingsgesprek</button>
-          </Link>
+    <div className="px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
+        {/* Image + CTA */}
+        <div className="w-full md:w-[45%] shrink-0">
+          <Image
+            src="https://mathia.nl/wp-content/uploads/2024/08/tiny-netwerkbijeenkomst-1024x683.jpg"
+            alt="Netwerkbijeenkomst Mathia"
+            width={1024}
+            height={683}
+            priority
+            className="rounded-xl w-full h-auto object-cover"
+          />
+          <div className="flex justify-center md:justify-end mt-4">
+            <Link href="https://calendly.com/mathiatv/30min" target="_blank">
+              <button className="bg-secondary-accent text-white px-5 sm:px-6 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md cursor-pointer w-full sm:w-auto">
+                Plan je gratis kennismakingsgesprek
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="w-full max-w-2xl">
-        {/* Header */}
-        <p className="text-xs tracking-widest uppercase  mb-3">Mijn werkwijze in het kort</p>
-        <h2 className="text-5xl font-semibold  mb-4 ">Zo werkt het</h2>
 
         {/* Steps */}
-        <div className="flex flex-col">
-          {steps.map((step, i) => {
-            const isLast = i === steps.length - 1;
+        <div className="w-full text-primary">
+          <p className="text-xs tracking-widest uppercase mb-3">Mijn werkwijze in het kort</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">Zo werkt het</h2>
 
-            return (
-              <div key={i} className="flex gap-6">
-                {/* Left: number + line */}
-                <div className="flex flex-col items-center">
-                  <div className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-semibold shrink-0 bg-emerald-900 text-white">{step.number}</div>
-                  {!isLast && <div className="w-px flex-1 my-2 bg-emerald-900/10" />}
-                </div>
+          <div className="flex flex-col">
+            {steps.map((step, i) => {
+              const isLast = i === steps.length - 1;
+              return (
+                <div key={i} className="flex gap-5 sm:gap-6">
+                  {/* Number + connector line */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center text-sm font-semibold shrink-0 bg-accent text-white">{step.number}</div>
+                    {!isLast && <div className="w-px flex-1 my-2 bg-secondary" />}
+                  </div>
 
-                {/* Right: content */}
-                <div className={isLast ? "pb-0" : "pb-10"}>
-                  <h3 className="text-lg font-semibold mt-2 mb-2 text-emerald-900">{step.title}</h3>
-                  <p className="text-sm text-stone-500 font-light leading-relaxed pr-4">{step.description}</p>
+                  {/* Content */}
+                  <div className={isLast ? "pb-0" : "pb-8 sm:pb-10"}>
+                    <h3 className="text-base sm:text-lg font-semibold mt-2 mb-1 text-primary">{step.title}</h3>
+                    <p className="text-sm text-primary font-light leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

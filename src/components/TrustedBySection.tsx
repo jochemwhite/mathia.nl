@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import CompanyCard from "./cards/review-card";
 import { Marquee } from "./ui/marquee";
@@ -55,11 +54,18 @@ const companies = [
 export default function TrustedBySection() {
   return (
     <section className="bg-[#86324C]">
-      <ChevronSection pointAt="top" sideDepth={50} pointPosition={70} height="50vh" overlap="-200px" className="bg-[#F9C8B8] px-6 md:px-12 relative z-20 flex items-end pb-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-start gap-12 w-full">
-          <h2 className="text-[#8B3A4C] text-center font-bold uppercase tracking-widest text-3xl whitespace-nowrap">VERTROUWD DOOR</h2>
+      <ChevronSection
+        pointAt="top"
+        sideDepth={50}
+        pointPosition={70}
+        height="auto"
+        overlap="-80px"
+        className="bg-[#F9C8B8] px-4 sm:px-6 md:px-12 relative z-20 flex items-end pt-20 sm:pt-24 md:pt-28 pb-10 md:pb-16"
+      >
+        <div className="max-w-7xl mt-16 mx-auto flex flex-col md:flex-row items-center justify-start gap-6 md:gap-12 w-full">
+          <h2 className="text-[#8B3A4C] text-center md:text-left font-bold uppercase tracking-widest text-2xl sm:text-3xl whitespace-nowrap shrink-0">VERTROUWD DOOR</h2>
 
-          <div className="flex-1 overflow-hidden">
+          <div className="w-full overflow-hidden">
             <Marquee pauseOnHover className="[--duration:20s]">
               {companies.map((company) => (
                 <CompanyCard key={company.company} img={company.img} name={company.company} href={company.href} />

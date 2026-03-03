@@ -54,7 +54,7 @@ const services: Service[] = [
 
 export default function ExtendedServicesSections() {
   return (
-    <section className="mx-auto bg-[#86324C] py-32">
+    <section className="mx-auto bg-accent py-32">
       <div className="max-w-7xl mx-auto space-y-32">
         {services.map((service) => (
           <div key={service.href} className={`flex gap-16 text-white ${service.reverseLayout ? "flex-row-reverse" : ""}`}>
@@ -84,7 +84,7 @@ export default function ExtendedServicesSections() {
                 ))}
               </ul>
 
-              <Link href={service.href} className="inline-block mt-10 bg-[#FF7F50] text-white px-8 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md">
+              <Link href={service.href} className="inline-block mt-10 bg-secondary-accent text-white px-8 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md">
                 Meer info →
               </Link>
             </div>

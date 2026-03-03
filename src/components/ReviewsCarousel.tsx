@@ -59,10 +59,25 @@ const reviews: Review[] = [
   },
 ];
 
-const VISIBLE = 3 as const;
 const GAP = 20 as const;
 const OFFSET = reviews.length;
 const extended: Review[] = [...reviews, ...reviews, ...reviews];
+
+// Responsive: show 1 card on mobile, 2 on sm, 3 on md+
+function useVisibleCount(): number {
+  const [count, setCount] = useState(1);
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth >= 768) setCount(3);
+      else if (window.innerWidth >= 540) setCount(2);
+      else setCount(1);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return count;
+}
 
 interface NavButtonProps {
   direction: "prev" | "next";
@@ -73,9 +88,9 @@ const NavButton: React.FC<NavButtonProps> = ({ direction, onClick }) => (
   <button
     onClick={onClick}
     aria-label={direction === "prev" ? "Vorige review" : "Volgende review"}
-    className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center border-2 border-white/60 bg-white/30 backdrop-blur-sm text-green-900 hover:bg-white/70 hover:border-white hover:scale-110 transition-all duration-200"
+    className="shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border-2 border-white/60 bg-white/30 backdrop-blur-sm text-green-900 hover:bg-white/70 hover:border-white hover:scale-110 transition-all duration-200"
   >
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
       {direction === "prev" ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
     </svg>
   </button>
@@ -87,8 +102,7 @@ interface ReviewCardProps {
 }
 
 const ReviewCard: React.FC<ReviewCardProps> = ({ review, cardWidthCSS }) => (
-  <div className="shrink-0 bg-white rounded-2xl p-7 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-200" style={{ width: cardWidthCSS }}>
-    {/* Header */}
+  <div className="shrink-0 bg-white rounded-2xl p-5 sm:p-7 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-200" style={{ width: cardWidthCSS }}>
     <div className="flex items-start justify-between mb-3">
       <div className="flex items-center gap-3">
         <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm shrink-0 ${review.color}`}>{review.initials}</div>
@@ -100,7 +114,6 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review, cardWidthCSS }) => (
       <GoogleIcon />
     </div>
 
-    {/* Stars */}
     <div className="flex items-center gap-0.5 mb-3" aria-label="5 sterren beoordeling">
       {Array.from({ length: 5 }).map((_, j) => (
         <StarIcon key={j} />
@@ -110,14 +123,12 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review, cardWidthCSS }) => (
       </span>
     </div>
 
-    {/* Text */}
     <p className="dm-sans text-sm text-gray-600 leading-relaxed">{review.text}</p>
   </div>
 );
 
-// ─── Main component ───────────────────────────────────────────────────────────
-
 const ReviewsCarousel: React.FC = () => {
+  const visible = useVisibleCount();
   const [index, setIndex] = useState<number>(OFFSET);
   const [animated, setAnimated] = useState<boolean>(true);
   const autoRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -127,7 +138,6 @@ const ReviewsCarousel: React.FC = () => {
     setIndex((prev) => prev + dir);
   };
 
-  // Silently jump back when we drift into clone territory
   useEffect(() => {
     if (!animated) return;
     const timer = setTimeout(() => {
@@ -142,7 +152,6 @@ const ReviewsCarousel: React.FC = () => {
     return () => clearTimeout(timer);
   }, [index, animated]);
 
-  // Re-enable animation after silent jump
   useEffect(() => {
     if (!animated) {
       const t = setTimeout(() => setAnimated(true), 30);
@@ -164,24 +173,21 @@ const ReviewsCarousel: React.FC = () => {
     return stopAuto;
   }, []);
 
-  const realIndex: number = (((index - OFFSET) % reviews.length) + reviews.length) % reviews.length;
-
-  const cardWidthCSS = `calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`;
+  const realIndex = (((index - OFFSET) % reviews.length) + reviews.length) % reviews.length;
+  const cardWidthCSS = `calc((100% - ${GAP * (visible - 1)}px) / ${visible})`;
   const translateCSS = `calc(-1 * ${index} * (${cardWidthCSS} + ${GAP}px))`;
 
   return (
-    <section className="relative overflow-hidden py-16 px-6" style={{ background: "linear-gradient(160deg,#B8D8BE 0%,#A8CDB4 60%,#C5DFC9 100%)" }} aria-label="Klantbeoordelingen">
+    <section className="relative overflow-hidden py-12 sm:py-16 px-4 sm:px-6" style={{ background: "linear-gradient(160deg,#B8D8BE 0%,#A8CDB4 60%,#C5DFC9 100%)" }} aria-label="Klantbeoordelingen">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
         .dm-serif { font-family:'DM Serif Display',serif; }
         .dm-sans  { font-family:'DM Sans',sans-serif; }
       `}</style>
 
-      <h2 className="dm-serif text-center text-3xl font-normal mb-10" style={{ color: "#1A4A2E" }}>
-        Wat mijn klanten zeggen
-      </h2>
+      <h2 className="dm-serif text-center text-2xl sm:text-3xl font-normal mb-8 sm:mb-10 text-primary">Wat mijn klanten zeggen</h2>
 
-      <div className="flex items-center gap-4 max-w-5xl mx-auto" onMouseEnter={stopAuto} onMouseLeave={startAuto}>
+      <div className="flex items-center gap-2 sm:gap-4 max-w-5xl mx-auto" onMouseEnter={stopAuto} onMouseLeave={startAuto}>
         <NavButton direction="prev" onClick={() => go(-1)} />
 
         <div className="flex-1 overflow-hidden">
@@ -203,7 +209,7 @@ const ReviewsCarousel: React.FC = () => {
         <NavButton direction="next" onClick={() => go(1)} />
       </div>
 
-      <div className="flex justify-center items-center gap-2 mt-7" role="tablist" aria-label="Review navigatie">
+      <div className="flex justify-center items-center gap-2 mt-6 sm:mt-7" role="tablist" aria-label="Review navigatie">
         {reviews.map((_, i) => (
           <button
             key={i}
@@ -220,15 +226,15 @@ const ReviewsCarousel: React.FC = () => {
         ))}
       </div>
 
-      <div className="text-center mt-14 max-w-7xl mx-auto">
-        <h3 className="dm-serif text-2xl font-bold mb-4 leading-snug">Wil jij je social media professioneler en consistenter aanpakken?</h3>
-        <p className="dm-sans text-base mb-2">Dan is dit het moment om daar serieus werk van te maken.</p>
-        <p className="dm-sans text-sm mb-8 leading-relaxed">
+      <div className="text-center mt-10 sm:mt-14 max-w-2xl mx-auto px-2">
+        <h3 className="text-xl sm:text-2xl font-bold mb-4 leading-snug text-primary">Wil jij je social media professioneler en consistenter aanpakken?</h3>
+        <p className="text-primary text-base mb-2">Dan is dit het moment om daar serieus werk van te maken.</p>
+        <p className="text-primary text-sm mb-8 leading-relaxed">
           Plan een vrijblijvend kennismakingsgesprek in en dan kijken we samen wat jij nodig hebt, waar het nu vastloopt en hoe ik je daarin kan ondersteunen.
         </p>
         <Link href="https://calendly.com/mathiatv/30min" target="_blank">
           <button
-            className="dm-sans font-semibold text-base text-white px-10 py-4 rounded-full hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
+            className="dm-sans font-semibold text-base text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
             style={{ background: "#E8671C", boxShadow: "0 4px 20px rgba(232,103,28,0.35)" }}
           >
             Plan je gratis kennismaking

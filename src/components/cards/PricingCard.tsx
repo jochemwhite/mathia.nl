@@ -33,9 +33,8 @@ export default function PricingCard({ card, delay, featured }: CardProps) {
     <div className="flex flex-col">
       <div
         className={`relative flex flex-col h-full rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-          featured ? "shadow-xl ring-2 ring-green-800/20" : "shadow-lg"
+          featured ? "shadow-xl ring-2 ring-secondary-accent/20" : "shadow-lg"
         }`}
-        style={{ background: "#FFFDF8" }}
       >
         {/* Top accent bar */}
         <div className="h-1.5 w-full" style={{ background: card.accentColor }} />
@@ -49,10 +48,8 @@ export default function PricingCard({ card, delay, featured }: CardProps) {
             <span className={`text-xs font-semibold px-3 py-1 rounded-full tracking-wide ${card.badgeColor}`}>{card.badge}</span>
           </div>
 
-          <h3 className="sora text-xl font-bold leading-snug mb-2" style={{ color: "#1A1A1A" }}>
-            {card.title}
-          </h3>
-          <p className="lato text-sm text-gray-500 mb-7 leading-relaxed">{card.subtitle}</p>
+          <h3 className="sora text-xl font-bold leading-snug mb-2 text-primary">{card.title}</h3>
+          <p className="lato text-sm text-primary mb-7 leading-relaxed">{card.subtitle}</p>
 
           {/* Items */}
           <ul className="flex-1 space-y-3 mb-8">
@@ -60,12 +57,12 @@ export default function PricingCard({ card, delay, featured }: CardProps) {
               <li key={i}>
                 <div className="flex items-start gap-2.5" style={{ color: card.accentColor }}>
                   <CheckIcon />
-                  <span className="lato text-sm text-gray-700 leading-snug">{item.text}</span>
+                  <span className="lato text-sm text-primary leading-snug">{item.text}</span>
                 </div>
                 {item.sub && (
                   <ul className="mt-1.5 ml-6 space-y-1">
                     {item.sub.map((s, j) => (
-                      <li key={j} className="lato text-xs text-gray-500 flex items-center gap-1.5 before:content-['–'] before:text-gray-300">
+                      <li key={j} className="lato text-xs text-primary flex items-center gap-1.5 before:content-['–'] before:text-gray-300">
                         <span>{s}</span>
                       </li>
                     ))}
