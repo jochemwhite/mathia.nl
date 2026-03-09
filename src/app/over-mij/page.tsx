@@ -8,7 +8,8 @@ import BookingSection from "@/src/components/BookingSection";
 
 export const metadata: Metadata = {
   title: "Over Mathia | Mathia.nl",
-  description: "Ik ben Mathia van Soest: Social media fanaat in hart en nieren. Lees mijn verhaal.",
+  description:
+    "Wie is Mathia? Ik ben Mathia van Soest: Social media fanaat in hart en nieren. Ik ben de eigenaar van mathia.nl en alles wat daar onder valt. Het is mijn gezonde obsessie om ondernemers te helpen aan meer social media resultaat. Dit doe ik door middel van het aanbieden van social media management van A […]",
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

@@ -1,5 +1,12 @@
 import BlogCard from "@/src/components/cards/BlogCard";
 import { blogPosts } from "@/src/lib/const";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blogs",
+  description: "Wie is Mathia? Ik ben Mathia van Soest"
+}
+
 
 export default function BlogsSection() {
   return (

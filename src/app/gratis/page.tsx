@@ -1,6 +1,13 @@
 import LeadMagnetSection from "@/src/components/LeadMagnetSection";
 import PodcastSection from "@/src/components/PodcastSection";
 import TestimonialSection from "@/src/components/testimonial-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gratis",
+  description: "Meer volgers krijgen zonder frustratie? Download mijn gratis e-book en ontdek 3 stappen die ik zelf gebruik om social media te laten groeien."
+}
+
 
 export default function GratisPage() {
   return (

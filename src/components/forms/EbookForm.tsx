@@ -20,7 +20,7 @@ import { Spinner } from "@/src/components/ui/spinner";
 
 export default function EbookForm() {
   const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const form = useForm<EbookSchema>({
     resolver: zodResolver(ebookSchema),

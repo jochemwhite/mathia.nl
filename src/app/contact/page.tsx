@@ -1,4 +1,10 @@
 import ContactForm from "@/src/components/forms/ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: ""
+}
 
 const ContactPage: React.FC = () => {
   return (
