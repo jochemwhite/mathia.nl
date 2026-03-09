@@ -1,0 +1,20 @@
+import { createEnv } from "@t3-oss/env-nextjs";
+import { z } from "zod";
+ 
+export const env = createEnv({
+  server: {
+    UMAMI_URL: z.url(),
+  },
+  client: {
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string().min(1),
+  },
+  // If you're using Next.js < 13.4.4, you'll need to specify the runtimeEnv manually
+  runtimeEnv: {
+    UMAMI_URL: process.env.UMAMI_URL,
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID,
+  },
+  // For Next.js >= 13.4.4, you only need to destructure client variables:
+  // experimental__runtimeEnv: {
+  //   NEXT_PUBLIC_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_PUBLISHABLE_KEY,
+  // }
+});

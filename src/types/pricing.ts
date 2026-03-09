@@ -14,7 +14,5 @@ export interface PricingCardType {
   firstSession: string;
   recurring: string;
   recurringLabel: string;
-  accentColor: string;
-  badgeColor: string;
   icon: ReactNode;
 }

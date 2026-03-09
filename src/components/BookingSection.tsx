@@ -12,14 +12,13 @@ export default function BookingSection() {
           </p>
           <p className="text-primary leading-relaxed">Benieuwd wat wij voor je kunnen betekenen met social media marketing?</p>
           <p className="text-primary font-medium">Laten we een (digitaal) koffietje drinken &amp; prik een moment in onze agenda!</p>
-          <CTAButton />
+          <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismaking" target="_blank" />
         </div>
 
         {/* Calendar embed */}
         <div className="w-full rounded-xl overflow-hidden">
           <iframe
             src="https://calendly.com/mathiatv/30min?embed_domain=mathia.nl&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1"
-            frameBorder="0"
             className="w-full h-[500px] sm:h-[560px] md:h-[600px]"
             title="Plan een afspraak"
           />

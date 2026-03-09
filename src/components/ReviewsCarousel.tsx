@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { CheckBadge, GoogleIcon } from "./global/icons";
 import { StarIcon } from "lucide-react";
 import Link from "next/link";
+import CTAButton from "./buttons/cta";
 
 interface Review {
   name: string;
@@ -178,12 +179,12 @@ const ReviewsCarousel: React.FC = () => {
   const translateCSS = `calc(-1 * ${index} * (${cardWidthCSS} + ${GAP}px))`;
 
   return (
-    <section className="relative overflow-hidden py-12 sm:py-16 px-4 sm:px-6" style={{ background: "linear-gradient(160deg,#B8D8BE 0%,#A8CDB4 60%,#C5DFC9 100%)" }} aria-label="Klantbeoordelingen">
+    <section className="relative overflow-hidden py-12 sm:py-16 px-4 sm:px-6 bg-secondary" aria-label="Klantbeoordelingen">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
         .dm-serif { font-family:'DM Serif Display',serif; }
         .dm-sans  { font-family:'DM Sans',sans-serif; }
-      `}</style>
+      `}</style>  
 
       <h2 className="dm-serif text-center text-2xl sm:text-3xl font-normal mb-8 sm:mb-10 text-primary">Wat mijn klanten zeggen</h2>
 
@@ -232,14 +233,7 @@ const ReviewsCarousel: React.FC = () => {
         <p className="text-primary text-sm mb-8 leading-relaxed">
           Plan een vrijblijvend kennismakingsgesprek in en dan kijken we samen wat jij nodig hebt, waar het nu vastloopt en hoe ik je daarin kan ondersteunen.
         </p>
-        <Link href="https://calendly.com/mathiatv/30min" target="_blank">
-          <button
-            className="dm-sans font-semibold text-base text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
-            style={{ background: "#E8671C", boxShadow: "0 4px 20px rgba(232,103,28,0.35)" }}
-          >
-            Plan je gratis kennismaking
-          </button>
-        </Link>
+        <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismaking" />
       </div>
     </section>
   );

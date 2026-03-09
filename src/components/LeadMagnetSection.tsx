@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import CTAButton from "./buttons/cta";
 
 interface LeadMagnetSectionProps {
   title: string;
@@ -24,11 +24,7 @@ export default function LeadMagnetSection({ title, description, image, reverse }
           <p className="text-primary leading-relaxed">
             Lukt het niet om meer volgers te krijgen? Dat hoeft niet! Ik heb drie accounts met meer dan 10.000 volgers, ik wéét welke strategieën werken. Ik deel ze graag met je!
           </p>
-          <Link href="/ebook">
-            <button className="bg-secondary-accent text-white px-8 py-3 rounded-md font-bold hover:bg-secondary-accent/80 transition-colors shadow-md w-full md:w-auto cursor-pointer">
-              Mathia, geef mij dat e-book!
-            </button>
-          </Link>
+          <CTAButton href="/ebook" text="Mathia, geef mij dat e-book!" />
         </div>
       </div>
     </section>

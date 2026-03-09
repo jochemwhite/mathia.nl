@@ -1,9 +1,13 @@
-import EbookForm from "@/src/components/forms/EbookForm";
+import EbookLearnSection from "@/src/components/gratis/Ebooklearnsection";
+import GratisEbook from "@/src/components/gratis/gratisEbook";
+import TestimonialSection from "@/src/components/testimonial-section";
 
 export default function EbookPage() {
   return (
-    <div className="max-w-7xl mx-auto">
-      <EbookForm />
-    </div>
+    <main>
+      <GratisEbook />
+      <EbookLearnSection />
+      <TestimonialSection />3
+    </main>
   );
 }

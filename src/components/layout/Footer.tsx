@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { socialLinks } from "@/src/lib/const";
+import CTAButton from "../buttons/cta";
+import { Separator } from "../ui/separator";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,35 +16,35 @@ export default function Footer() {
 
         {/* Contact Column */}
         <div className="col-span-1">
-          <h3 className="text-[#2E6F5E] font-bold text-lg mb-6">Contact</h3>
-          <ul className="space-y-4 text-[#2E6F5E]/80">
+          <h3 className="text-primary font-bold text-lg mb-6">Contact</h3>
+          <ul className="space-y-4 text-primary/80">
             <li>
-              <a href="mailto:contact@mathia.nl" className="hover:text-[#1b4332]">
-                contact@mathia.nl
-              </a>
+              <CTAButton href="https://calendly.com/mathiatv/30min" text="Afspraak maken" target="_blank" className="text-sm shrink-0 font-medium whitespace-nowrap" variant="small" />
             </li>
             <li>
-              <button className="bg-[#2E6F5E] text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-[#1b4332] transition-colors shadow-md mt-2">Afspraak maken</button>
+              <Link href="mailto:contact@mathia.nl" className="hover:text-primary" target="_blank">
+                contact@mathia.nl
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Aanbod Column */}
         <div className="col-span-1">
-          <h3 className="text-[#2E6F5E] font-bold text-lg mb-6">Aanbod</h3>
-          <ul className="space-y-4 text-[#2E6F5E]/80">
+          <h3 className="text-primary font-bold text-lg mb-6">Aanbod</h3>
+          <ul className="space-y-4 text-primary">
             <li>
-              <Link href="#" className="hover:text-[#1b4332]">
+              <Link href="/social-media-beheer" className="hover:text-primary/80">
                 Social media management
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-[#1b4332]">
+              <Link href="/strategie-sessies" className="hover:text-primary/80">
                 Strategie sessies
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-[#1b4332]">
+              <Link href="/mathia-academy" className="hover:text-primary/80">
                 Mathia Academy
               </Link>
             </li>
@@ -50,43 +53,28 @@ export default function Footer() {
 
         {/* Socials Column */}
         <div className="col-span-1">
-          <h3 className="text-[#2E6F5E] font-bold text-lg mb-6">Socials</h3>
-          <ul className="space-y-4 text-[#2E6F5E]/80">
-            <li>
-              <Link href="#" className="hover:text-[#1b4332]">
-                LinkedIn
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-[#1b4332]">
-                Instagram
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-[#1b4332]">
-                TikTok
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-[#1b4332]">
-                YouTube
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-[#1b4332]">
-                Facebook
-              </Link>
-            </li>
+          <h3 className="text-primary font-bold text-lg mb-6">Socials</h3>
+          <ul className="space-y-4 text-primary/80">
+            {socialLinks.map((social) => (
+              <li key={social.name}>
+                <Link href={social.href} className="hover:text-primary flex flex-row gap-2 items-center" target="_blank">
+                  <social.icon className="w-5 h-5" />
+                  {social.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-10 pt-4 border-t border-[#2E6F5E]/10 text-center text-[#2E6F5E]/60 text-sm flex flex-row justify-between">
+
+      <Separator className="mx-auto max-w-7xl my-10 bg-primary/20"  />
+      <div className="max-w-7xl mx-auto mt-10 text-center text-primary/60 text-sm flex flex-row justify-between">
         <p>Copyright © {currentYear} Mathia.nl</p>
 
         <p>
           build by{" "}
-          <Link href="https://amrio.nl" target="_blank" className="hover:text-[#1b4332]">
+          <Link href="https://amrio.nl" target="_blank" className="hover:text-primary/80">
             Amrio
           </Link>
         </p>

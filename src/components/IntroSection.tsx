@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import VideoPlayer from "./VideoPlayer";
+import CTAButton from "./buttons/cta";
 
 export default function IntroSection() {
   return (
@@ -22,9 +23,7 @@ export default function IntroSection() {
             </Link>{" "}
             verzorgen wij jouw social media van A tot Z.
           </p>
-          <Link href="/aanbod" className="inline-block bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-accent/80 transition-colors shadow-md">
-            Bekijk onze diensten
-          </Link>
+          <CTAButton href="/aanbod" text="Bekijk onze diensten" />
         </div>
 
         {/* Media column */}

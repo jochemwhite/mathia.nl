@@ -6,9 +6,10 @@ import ReviewsCarousel from "@/src/components/ReviewsCarousel";
 import SocialMediaBeheer from "@/src/components/SocialMediaBeheer";
 import SocialmediaIntroSection from "@/src/components/SocialmediaIntroSection";
 import WhyChooseMe from "@/src/components/WhyChooseMe";
+
 export default function SocialMediaBeheerPage() {
   return (
-    <main className="">
+    <main>
       <HeroSection />
       <SocialmediaIntroSection />
       <SocialMediaBeheer />

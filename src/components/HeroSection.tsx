@@ -29,7 +29,7 @@ export default function HeroSection() {
         </p>
 
         <div className="w-full sm:w-auto">
-          <CTAButton />
+          <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismaking" target="_blank" />
         </div>
       </div>
     </section>

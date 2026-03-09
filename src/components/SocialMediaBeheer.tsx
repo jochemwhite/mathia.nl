@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CTAButton from "./buttons/cta";
 
 export default function SocialMediaBeheer() {
   const included = [
@@ -27,11 +28,7 @@ export default function SocialMediaBeheer() {
               className="rounded-xl w-full h-auto object-cover"
             />
             <div className="flex justify-center md:justify-end mt-4">
-              <Link href="https://calendly.com/mathiatv/30min" target="_blank">
-                <button className="bg-secondary-accent text-white px-6 sm:px-8 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md cursor-pointer w-full sm:w-auto">
-                  Plan je gratis kennismakingsgesprek
-                </button>
-              </Link>
+              <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismakingsgesprek" />
             </div>
           </div>
 

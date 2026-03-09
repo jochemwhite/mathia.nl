@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CTAButton from "./buttons/cta";
 
 const steps = [
   {
@@ -44,11 +45,7 @@ export default function HowItWorks() {
             className="rounded-xl w-full h-auto object-cover"
           />
           <div className="flex justify-center md:justify-end mt-4">
-            <Link href="https://calendly.com/mathiatv/30min" target="_blank">
-              <button className="bg-secondary-accent text-white px-5 sm:px-6 py-3 rounded-md font-bold hover:bg-[#e06b40] transition-colors shadow-md cursor-pointer w-full sm:w-auto">
-                Plan je gratis kennismakingsgesprek
-              </button>
-            </Link>
+            <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismakingsgesprek" />
           </div>
         </div>
 

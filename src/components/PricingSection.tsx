@@ -26,8 +26,6 @@ const cards: PricingCardType[] = [
     firstSession: "€1.500,-",
     recurring: "€600,-",
     recurringLabel: "per 3 maanden",
-    accentColor: "#1A4A2E",
-    badgeColor: "bg-amber-100 text-amber-800",
     icon: <LocationIcon />,
   },
   {
@@ -39,8 +37,6 @@ const cards: PricingCardType[] = [
     firstSession: "€1.000,-",
     recurring: "€420,-",
     recurringLabel: "per 3 maanden",
-    accentColor: "#2D5A8A",
-    badgeColor: "bg-blue-100 text-blue-800",
     icon: <OnlineIcon />,
   },
   {
@@ -63,8 +59,6 @@ const cards: PricingCardType[] = [
     firstSession: "€250,-",
     recurring: "",
     recurringLabel: "per maand",
-    accentColor: "#7A3020",
-    badgeColor: "bg-orange-100 text-orange-800",
     icon: <ManagementIcon />,
   },
 ];
@@ -75,15 +69,15 @@ export default function PricingSection() {
       <div className="relative max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <div>
-            <span className="lato inline-block text-xs font-bold uppercase tracking-[0.25em] text-green-700 bg-green-100 px-4 py-1.5 rounded-full mb-5">Diensten &amp; Tarieven</span>
-            <h1 className="sora text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-5">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-secondary-accent bg-secondary-accent/10 px-4 py-1.5 rounded-full mb-5">Diensten &amp; Tarieven</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-5">
               Investeer in jouw
               <br />
               <span>social media groei</span>
             </h1>
           </div>
           <div>
-            <p className="lato text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">Kies het pakket dat bij jouw bedrijf en ambities past. Van strategie tot volledige uitvoering.</p>
+            <p className="lato text-lg text-primary max-w-xl mx-auto leading-relaxed">Kies het pakket dat bij jouw bedrijf en ambities past. Van strategie tot volledige uitvoering.</p>
           </div>
         </div>
 

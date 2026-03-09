@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PodcastSection() {
   return (
-    <section className="bg-[#186B58] py-10 px-4 sm:px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-accent py-10 px-4 sm:px-6 md:px-12 relative overflow-hidden">
       <div className="max-w-5xl mx-auto py-10 sm:py-16">
         <Link href="https://open.spotify.com/show/1Gw6w5uCoDqdDWWwzdjidF?si=4428173a89044cd6" target="_blank" className="flex flex-col sm:flex-row items-center sm:items-stretch gap-8 sm:gap-0 group">
           {/* Left column: heading + studio photo */}
