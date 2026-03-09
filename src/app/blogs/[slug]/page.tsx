@@ -13,9 +13,9 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getBlogPost(slug);
-  if (!post) return { title: "Blog niet gevonden | Mathia.nl" };
+  if (!post) return { title: "Blog niet gevonden" };
   return {
-    title: `${post.title} | Mathia.nl`,
+    title: post.title,
     description: post.excerpt,
   };
 }
