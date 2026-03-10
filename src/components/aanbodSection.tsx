@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AanbodSection() {
   return (
-    <section className="container py-12 md:py-0">
+    <section className="container px-4 py-12 md:py-0">
       <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
         {/* Text */}
         <div className="w-full md:w-1/2">

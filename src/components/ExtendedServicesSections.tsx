@@ -67,8 +67,8 @@ const services: Service[] = [
 
 export default function ExtendedServicesSections() {
   return (
-    <section className="mx-auto bg-accent py-16 md:py-32">
-      <div className="container space-y-16 md:space-y-32">
+    <section className=" bg-accent py-16 md:py-32">
+      <div className="container px-4 space-y-16 md:space-y-32">
         {services.map((service) => (
           <div
             key={service.href}
