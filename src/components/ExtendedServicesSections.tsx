@@ -34,8 +34,7 @@ const services: Service[] = [
   {
     title: "STRATEGIE SESSIES",
     subtitle: "Jouw plan in 1 dagdeel",
-    image:
-      "/img/netwerkbijeenkomst.jpg",
+    image: "/img/netwerkbijeenkomst.jpg",
     href: "/strategie-sessies",
     reverseLayout: true,
     paragraphs: [
@@ -51,8 +50,7 @@ const services: Service[] = [
   {
     title: "MATHIA ACADEMY",
     subtitle: "Leer het zelf, op jouw tempo",
-    image:
-      "/img/video-opnemen.jpg",
+    image: "/img/video-opnemen.jpg",
     href: "/mathia-academy",
     reverseLayout: false,
     paragraphs: [
@@ -69,52 +67,61 @@ const services: Service[] = [
 
 export default function ExtendedServicesSections() {
   return (
-    <section className="mx-auto bg-accent py-32">
-      <div className="container space-y-32">
+    <section className="mx-auto bg-accent py-16 md:py-32">
+      <div className="container space-y-16 md:space-y-32">
         {services.map((service) => (
           <div
             key={service.href}
-            className={`flex gap-16 text-white ${service.reverseLayout ? "flex-row-reverse" : ""}`}
+            className={`flex flex-col gap-8 text-white md:flex-row md:gap-16 ${
+              service.reverseLayout ? "md:flex-row-reverse" : ""
+            }`}
           >
-            <div className="w-1/2">
+            {/* Image — always on top on mobile */}
+            <div className="w-full md:w-1/2">
               <Link href={service.href}>
                 <Image
                   src={service.image}
                   alt={service.title}
-                  className="rounded-xl"
+                  className="w-full rounded-xl object-cover"
                   width={500}
                   height={300}
                   priority
                 />
               </Link>
             </div>
-            <div className="w-1/2">
+
+            {/* Text content */}
+            <div className="w-full md:w-1/2">
               <Link href={service.href}>
-                <h2 className="text-4xl font-bold">{service.title}</h2>
+                <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+                  {service.title}
+                </h2>
               </Link>
-              <h3 className="text-2xl font-bold mt-2">{service.subtitle}</h3>
+              <h3 className="mt-2 text-xl font-bold sm:text-2xl">
+                {service.subtitle}
+              </h3>
 
               {service.paragraphs.map((p, i) => (
-                <p key={i} className="text-xl mt-6">
+                <p key={i} className="mt-4 text-base sm:text-lg md:mt-6 md:text-xl">
                   {p}
                 </p>
               ))}
 
-              <ul className="text-xl mt-8 space-y-3">
+              <ul className="mt-6 space-y-3 text-base sm:text-lg md:mt-8 md:text-xl">
                 {service.checkmarks.map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
-                    <Check className="text-secondary-accent shrink-0" />
+                    <Check className="shrink-0 text-secondary-accent" />
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-10">
+              <div className="mt-8 md:mt-10">
                 <CTAButton
                   href={service.href}
                   text="Meer info →"
                   variant="normal"
-                  className="mt-20 w-full"
+                  className="w-full"
                 />
               </div>
             </div>
