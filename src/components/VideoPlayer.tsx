@@ -24,7 +24,7 @@ export default function VideoPlayer({ src, className }: VideoPlayerProps) {
 
   return (
     <div className={`relative flex-1 rounded-2xl overflow-hidden group cursor-pointer bg-black/5 ${className ?? ""}`} onClick={togglePlay}>
-      <video ref={videoRef} src={src} playsInline className="w-full h-full object-cover rounded-2xl" onEnded={() => setIsPlaying(false)} />
+      <video ref={videoRef} src={src} playsInline className="w-full h-full object-cover rounded-2xl" onEnded={() => setIsPlaying(false)} {...({ fetchPriority: "high" } as any)} />
 
       {/* Play/Pause overlay */}
       <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}>

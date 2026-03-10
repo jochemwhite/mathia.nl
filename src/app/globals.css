@@ -100,11 +100,11 @@
   --popover-foreground: #1a1a1a;
 
   /* === Brand Colors === */
-  --primary: #196b57; /* Evergreen Teal */
+  --primary: #0f5242;        /* slightly darker teal, was #196b57 */
   --primary-foreground: #ffffff; /* White */
 
   --secondary: #c2e3d0; /* Clear Sky Cyan */
-  --secondary-foreground: #0f2e2e; /* Deep Teal Ink */
+  --secondary-foreground: #082820;  /* darker footer text */
 
   --accent: #86324c; /* Soft Peach Glow */
   --accent-foreground: #196b57; /* Plum Ink */
