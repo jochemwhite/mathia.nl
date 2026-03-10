@@ -16,13 +16,13 @@ export default function Footer() {
 
         {/* Contact Column */}
         <div className="col-span-1">
-          <h3 className="text-primary font-bold text-lg mb-6">Contact</h3>
-          <ul className="space-y-4 text-primary/80">
+          <h3 className="text-secondary-foreground font-bold text-lg mb-6">Contact</h3>
+          <ul className="space-y-4 text-secondary-foreground/80">
             <li>
               <CTAButton href={CTALINK} text="Afspraak maken" target="_blank" className="text-sm shrink-0 font-medium whitespace-nowrap" variant="small" />
             </li>
             <li>
-              <Link href={email.href} className="hover:text-primary" target="_blank">
+              <Link href={email.href} className="hover:text-secondary-foreground" target="_blank">
                 {email.label}
               </Link>
             </li>
@@ -31,20 +31,20 @@ export default function Footer() {
 
         {/* Aanbod Column */}
         <div className="col-span-1">
-          <h3 className="text-primary font-bold text-lg mb-6">Aanbod</h3>
-          <ul className="space-y-4 text-primary">
+          <h3 className="text-secondary-foreground font-bold text-lg mb-6">Aanbod</h3>
+          <ul className="space-y-4 text-secondary-foreground">
             <li>
-              <Link href="/social-media-beheer" className="hover:text-primary/80">
+              <Link href="/social-media-beheer" className="hover:text-secondary-foreground/70">
                 Social media management
               </Link>
             </li>
             <li>
-              <Link href="/strategie-sessies" className="hover:text-primary/80">
+              <Link href="/strategie-sessies" className="hover:text-secondary-foreground/70">
                 Strategie sessies
               </Link>
             </li>
             <li>
-              <Link href="/mathia-academy" className="hover:text-primary/80">
+              <Link href="/mathia-academy" className="hover:text-secondary-foreground/70">
                 Mathia Academy
               </Link>
             </li>
@@ -53,11 +53,11 @@ export default function Footer() {
 
         {/* Socials Column */}
         <div className="col-span-1">
-          <h3 className="text-primary font-bold text-lg mb-6">Socials</h3>
-          <ul className="space-y-4 text-primary/80">
+          <h3 className="text-secondary-foreground font-bold text-lg mb-6">Socials</h3>
+          <ul className="space-y-4 text-secondary-foreground/80">
             {socialLinks.map((social) => (
               <li key={social.name}>
-                <Link href={social.href} className="hover:text-primary flex flex-row gap-2 items-center" target="_blank">
+                <Link href={social.href} className="hover:text-secondary-foreground flex flex-row gap-2 items-center" target="_blank">
                   <social.icon className="w-5 h-5" />
                   {social.name}
                 </Link>
@@ -67,14 +67,12 @@ export default function Footer() {
         </div>
       </div>
 
-
-      <Separator className="mx-auto max-w-7xl my-10 bg-primary/20"  />
-      <div className="container mt-10 text-center text-primary/60 text-sm flex flex-row justify-between">
+      <Separator className="mx-auto max-w-7xl my-10 bg-secondary-foreground/20" />
+      <div className="container mt-10 text-center text-secondary-foreground text-sm flex flex-row justify-between">
         <p>Copyright © {currentYear} Mathia.nl</p>
-
         <p>
           build by{" "}
-          <Link href="https://amrio.nl" target="_blank" className="hover:text-primary/80">
+          <Link href="https://amrio.nl" target="_blank" className="underline hover:text-secondary-foreground">
             Amrio
           </Link>
         </p>
