@@ -19,7 +19,7 @@ export default function LeadMagnetSection({ title, description, image, reverse }
 
         {/* Text */}
         <div className={`space-y-4 md:space-y-6 text-primary ${reverse ? "md:order-1" : "md:order-2"}`}>
-          <h4 className="text-sm sm:text-base md:text-xl font-bold leading-tight tracking-wide uppercase">HAAL MEER RESULTAAT UIT JE SOCIAL MEDIA</h4>
+          <p className="text-sm sm:text-base md:text-xl font-bold leading-tight tracking-wide uppercase">HAAL MEER RESULTAAT UIT JE SOCIAL MEDIA</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">Meer klanten in 3 stappen</h2>
           <p className="text-primary leading-relaxed">
             Lukt het niet om meer volgers te krijgen? Dat hoeft niet! Ik heb drie accounts met meer dan 10.000 volgers, ik wéét welke strategieën werken. Ik deel ze graag met je!

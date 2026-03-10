@@ -13,7 +13,7 @@ export default function HeroSection() {
           loop
           playsInline
           className="object-cover h-full w-full"
-          {...({ fetchpriority: "high" } as any)}
+          {...({ fetchPriority: "high" } as any)}
         />
         {/* Green Overlay */}
         <div className="absolute inset-0 bg-accent/80 mix-blend-multiply" />
