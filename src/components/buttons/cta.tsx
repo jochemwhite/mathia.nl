@@ -7,13 +7,17 @@ type CTAButtonProps = ComponentProps<typeof Link> & {
   variant?: "normal" | "small";
 };
 
-export default function CTAButton({ text, variant, ...linkProps }: CTAButtonProps) {
+export default function CTAButton({
+  text,
+  variant,
+  ...linkProps
+}: CTAButtonProps) {
   return (
     <Link
       {...linkProps}
       className={cn(
-        "bg-secondary-accent text-white px-8 py-3 rounded-md font-bold text-lg hover:bg-secondary-accent/80 transition-colors w-fit shadow-lg cursor-pointer",
-        variant === "small" && "px-4 py-2 text-sm",
+        "bg-secondary-accent text-white px-5 py-2 md:px-8 md:py-3 rounded-md font-bold text-sm md:text-lg hover:bg-secondary-accent/80 transition-colors w-fit shadow-lg cursor-pointer",
+        variant === "small" && "px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm",
         linkProps.className,
       )}
     >
