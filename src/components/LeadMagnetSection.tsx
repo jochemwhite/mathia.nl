@@ -11,7 +11,7 @@ interface LeadMagnetSectionProps {
 export default function LeadMagnetSection({ title, description, image, reverse }: LeadMagnetSectionProps) {
   return (
     <section className="bg-card py-16 md:py-20 px-4 sm:px-6 md:px-12 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="container grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Image */}
         <div className={`flex justify-center ${reverse ? "md:order-2" : "md:order-1"}`}>
           <Image src={image} alt={title} width={300} height={300} className="w-48 sm:w-64 md:w-72 lg:w-80 h-auto object-contain" />

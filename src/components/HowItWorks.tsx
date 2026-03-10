@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CTAButton from "./buttons/cta";
+import { CTALINK } from "../lib/const";
 
 const steps = [
   {
@@ -32,12 +33,12 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <div className="px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto">
+    <div className="px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 container">
       <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
         {/* Image + CTA */}
         <div className="w-full md:w-[45%] shrink-0">
           <Image
-            src="https://mathia.nl/wp-content/uploads/2024/08/tiny-netwerkbijeenkomst-1024x683.jpg"
+            src="/img/netwerkbijeenkomst.jpg"
             alt="Netwerkbijeenkomst Mathia"
             width={1024}
             height={683}
@@ -45,7 +46,7 @@ export default function HowItWorks() {
             className="rounded-xl w-full h-auto object-cover"
           />
           <div className="flex justify-center md:justify-end mt-4">
-            <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismakingsgesprek" />
+            <CTAButton href={CTALINK} text="Plan je gratis kennismakingsgesprek" />
           </div>
         </div>
 

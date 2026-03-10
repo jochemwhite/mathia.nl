@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { ArrowIcon } from "../global/icons";
 import Link from "next/link";
 import CTAButton from "../buttons/cta";
+import { CTALINK } from "@/src/lib/const";
 
 interface ServiceItem {
   text: string;
@@ -101,7 +102,7 @@ export default function PricingCard({ card, delay, featured }: CardProps) {
           </div>
 
           {/* CTA */}
-          <CTAButton href="https://calendly.com/mathiatv/30min" text="Neem contact op" variant="normal" className="w-full" />
+          <CTAButton href={CTALINK} text="Neem contact op" variant="normal" className="w-full" />
         </div>
       </div>
     </div>

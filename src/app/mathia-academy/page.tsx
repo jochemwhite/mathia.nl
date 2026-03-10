@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function MathiaAcademyPage() {
   return (
-    <div>
+    <main>
       <AcademySection />
-    </div>
+    </main>
   );
 }

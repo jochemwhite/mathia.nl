@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AanbodSection() {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="container">
       <div className="flex items-center justify-center gap-12">
         <div>
           <h1 className="text-4xl font-semibold text-primary">Meer weter over onze diensten?</h1>
@@ -44,7 +44,7 @@ export default function AanbodSection() {
         </div>
 
         <div>
-          <Image src="https://mathia.nl/wp-content/uploads/2024/08/website-foto-SCA-promo-768x960.png" alt="website-foto-SCA-promo" width={1500} height={960} priority />
+          <Image src="/img/website-foto-SCA-promo.png" alt="website-foto-SCA-promo" width={1500} height={960} priority />
         </div>
       </div>
     </section>

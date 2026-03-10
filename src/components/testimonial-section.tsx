@@ -7,7 +7,7 @@ export default function TestimonialSection() {
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-12">
           {/* Avatar + name */}
           <div className="flex flex-col items-center shrink-0">
-            <Image src="https://mathia.nl/wp-content/uploads/2024/08/Lynsey-profielfoto-tiny-e1722505715525-150x150.png" className="rounded-full" alt="Lynsey van Bergen" width={150} height={150} />
+            <Image src="/img/Lynsey-profielfoto.png" className="rounded-full" alt="Lynsey van Bergen" width={150} height={150} />
             <p className="text-primary mt-4 text-sm text-center">Lynsey van Bergen</p>
           </div>
 

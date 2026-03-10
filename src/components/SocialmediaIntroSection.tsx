@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import CTAButton from "./buttons/cta";
+import { CTALINK } from "../lib/const";
 
 export default function SocialmediaIntroSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16">
+    <section className="container px-4 sm:px-6 md:px-12 py-12 sm:py-16">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 text-primary">
         {/* Text */}
         <div className="flex-1">
@@ -23,7 +24,7 @@ export default function SocialmediaIntroSection() {
         {/* Image */}
         <div className="w-full md:w-1/2 shrink-0">
           <Image
-            src="https://mathia.nl/wp-content/uploads/2026/02/social-media-manager-mathia-aan-het-werk-e1772099452388.jpg"
+            src="/img/social-media-manager-mathia-aan-het-werk.jpg"
             alt="Social media manager Mathia aan het werk"
             width={1500}
             height={960}
@@ -34,7 +35,7 @@ export default function SocialmediaIntroSection() {
 
       {/* CTA */}
       <div className="flex justify-center md:justify-end mt-8 sm:mt-10">
-        <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan een kennismakingsgesprek" />
+        <CTAButton href={CTALINK} text="Plan een kennismakingsgesprek" />
       </div>
     </section>
   );

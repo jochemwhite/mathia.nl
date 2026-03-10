@@ -1,9 +1,10 @@
+import { CTALINK } from "../lib/const";
 import CTAButton from "./buttons/cta";
 
 export default function BookingSection() {
   return (
     <section className="bg-white py-16 md:py-20 px-4 sm:px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-start">
+      <div className="container grid md:grid-cols-2 gap-10 md:gap-12 items-start">
         {/* Text Content */}
         <div className="space-y-5 md:space-y-6 text-primary">
           <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl font-bold">Even kennismaken?</h2>
@@ -12,7 +13,7 @@ export default function BookingSection() {
           </p>
           <p className="text-primary leading-relaxed">Benieuwd wat wij voor je kunnen betekenen met social media marketing?</p>
           <p className="text-primary font-medium">Laten we een (digitaal) koffietje drinken &amp; prik een moment in onze agenda!</p>
-          <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismaking" target="_blank" />
+          <CTAButton href={CTALINK} text="Plan je gratis kennismaking" target="_blank" />
         </div>
 
         {/* Calendar embed */}

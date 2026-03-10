@@ -17,7 +17,7 @@ const services: Service[] = [
   {
     title: "SOCIAL MEDIA MANAGEMENT",
     subtitle: "Uitbesteden met een gerust hart",
-    image: "https://mathia.nl/wp-content/uploads/2024/08/tiny-foto-300x300.png",
+    image: "/img/mathia-met-laptop-open.png",
     href: "/social-media-management",
     reverseLayout: false,
     paragraphs: [
@@ -35,7 +35,7 @@ const services: Service[] = [
     title: "STRATEGIE SESSIES",
     subtitle: "Jouw plan in 1 dagdeel",
     image:
-      "https://mathia.nl/wp-content/uploads/2024/08/tiny-netwerkbijeenkomst-300x300.jpg",
+      "/img/netwerkbijeenkomst.jpg",
     href: "/strategie-sessies",
     reverseLayout: true,
     paragraphs: [
@@ -52,7 +52,7 @@ const services: Service[] = [
     title: "MATHIA ACADEMY",
     subtitle: "Leer het zelf, op jouw tempo",
     image:
-      "https://mathia.nl/wp-content/uploads/2024/08/tiny-video-opnemen-2-300x300.jpg",
+      "/img/video-opnemen.jpg",
     href: "/mathia-academy",
     reverseLayout: false,
     paragraphs: [
@@ -70,7 +70,7 @@ const services: Service[] = [
 export default function ExtendedServicesSections() {
   return (
     <section className="mx-auto bg-accent py-32">
-      <div className="max-w-7xl mx-auto space-y-32">
+      <div className="container space-y-32">
         {services.map((service) => (
           <div
             key={service.href}

@@ -5,7 +5,7 @@ export default function WhyChooseMe() {
 
   return (
     <section className="px-4 sm:px-6 md:px-12 py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="container">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* Text */}
           <div className="flex-1 space-y-4 text-primary">

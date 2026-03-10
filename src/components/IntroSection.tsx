@@ -6,7 +6,7 @@ import CTAButton from "./buttons/cta";
 export default function IntroSection() {
   return (
     <section className="py-16 md:py-20 px-4 sm:px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+      <div className="container grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* Text column */}
         <div className="space-y-5 md:space-y-6">
           <h2 className="text-accent font-bold uppercase tracking-widest text-2xl sm:text-3xl">JOUW SOCIAL MEDIA</h2>
@@ -32,7 +32,7 @@ export default function IntroSection() {
           <div className="flex flex-col items-end gap-3 w-[45%]">
             <div className="relative w-full rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://mathia.nl/wp-content/uploads/2024/02/tiny-mathia-kijkt-in-camera-682x1024.png"
+                src="/img/tiny-mathia-kijkt-in-camera.png"
                 alt="Mathia kijkt in camera"
                 width={682}
                 height={1024}
@@ -41,7 +41,7 @@ export default function IntroSection() {
             </div>
             <div className="relative w-full rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://mathia.nl/wp-content/uploads/2024/02/Ontwerp-zonder-titel-4-1-1024x682.png"
+                src="/img/mathia-met-laptop.png"
                 alt="Working on laptop"
                 width={1024}
                 height={682}

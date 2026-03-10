@@ -4,6 +4,7 @@ import { CheckBadge, GoogleIcon } from "./global/icons";
 import { StarIcon } from "lucide-react";
 import Link from "next/link";
 import CTAButton from "./buttons/cta";
+import { CTALINK } from "../lib/const";
 
 interface Review {
   name: string;
@@ -233,7 +234,7 @@ const ReviewsCarousel: React.FC = () => {
         <p className="text-primary text-sm mb-8 leading-relaxed">
           Plan een vrijblijvend kennismakingsgesprek in en dan kijken we samen wat jij nodig hebt, waar het nu vastloopt en hoe ik je daarin kan ondersteunen.
         </p>
-        <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismaking" />
+        <CTAButton href={CTALINK} text="Plan je gratis kennismaking" />
       </div>
     </section>
   );

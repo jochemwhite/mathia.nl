@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CTAButton from "../buttons/cta";
+import { CTALINK } from "@/src/lib/const";
 
 export default function HeroSection() {
   return (
@@ -29,7 +30,7 @@ export default function HeroSection() {
             — met een gezonde obsessie om ondernemers te helpen aan meer social media resultaat.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-            <CTAButton href="https://calendly.com/mathiatv/30min" text="Afspraak maken" target="_blank" />
+            <CTAButton href={CTALINK} text="Afspraak maken" target="_blank" />
 
             <Link href="/blogs/wie-is-mathia" className="rounded-lg border border-(--primary) px-6 py-3 text-sm font-bold text-(--primary) transition hover:bg-(--primary) hover:text-white">
               Lees mijn verhaal →

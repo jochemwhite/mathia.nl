@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PricingCardType, ServiceItemType } from "../types/pricing";
 import PricingCard from "./cards/PricingCard";
 import { LocationIcon, ManagementIcon, OnlineIcon } from "./global/icons";
+import { CTALINK } from "../lib/const";
 
 const sharedItems: ServiceItemType[] = [
   { text: "Iedere 3 maanden" },
@@ -92,7 +93,7 @@ export default function PricingSection() {
         <div className="text-center mt-16">
           <p className="lato text-sm text-primary">
             Twijfel je welk pakket het beste bij jou past?{" "}
-            <Link href="https://calendly.com/mathiatv/30min" target="_blank">
+            <Link href={CTALINK} target="_blank">
               <button className="text-secondary-accent font-semibold hover:underline transition-all cursor-pointer">Plan een gratis kennismakingsgesprek</button>
             </Link>
             .

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/src/components/ui/sheet";
-import { navLinks, aanbodItems } from "@/src/lib/const";
+import { navLinks, aanbodItems, CTALINK } from "@/src/lib/const";
 import { socialLinks } from "@/src/lib/const";
 import CTAButton from "../buttons/cta";
 import { Separator } from "../ui/separator";
@@ -70,7 +70,7 @@ export default function MobileNav() {
 
             <Separator />
             <div className="px-4 py-3 flex flex-row justify-center">
-              <CTAButton href="https://calendly.com/mathiatv/30min" text="Afspraak Maken" target="_blank" onClick={() => setSheetOpen(false)} className="w-full" variant="small" />
+              <CTAButton href={CTALINK} text="Afspraak Maken" target="_blank" onClick={() => setSheetOpen(false)} className="w-full" variant="small" />
             </div>
           </div>
           <SheetFooter className="px-6 py-4 border-t border-border">
@@ -94,7 +94,7 @@ export default function MobileNav() {
 
       {/* Mobile CTA */}
       <Link
-        href="https://calendly.com/mathiatv/30min"
+        href={CTALINK}
         target="_blank"
         className="bg-secondary-accent text-white px-3 py-2 rounded-md text-xs font-medium shadow-sm hover:opacity-90 transition-opacity whitespace-nowrap"
       >

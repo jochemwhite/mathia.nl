@@ -35,7 +35,7 @@ export default function EbookSection() {
 
         {/* ── Right: stacked mockup images ── */}
         <div className="relative flex h-[420px] items-center justify-center lg:h-[500px]">
-          <Image src="https://mathia.nl/wp-content/uploads/2026/02/gratis-ebook-meer-volgers-social-media-2.png" width={500} height={500} alt="dfsf" />
+          <Image src="/img/gratis-ebook-meer-volgers-social-media-2.png" width={500} height={500} alt="dfsf" />
         </div>
       </div>
     </section>

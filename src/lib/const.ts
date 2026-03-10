@@ -1,5 +1,11 @@
 import { ComponentType, SVGProps } from "react";
-import { FacebookIcon, InstagramIcon, LinkedInIcon, TikTokIcon, YouTubeIcon } from "../components/global/icons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from "../components/global/icons";
 import { BlogPost } from "../types/blog";
 
 export type SocialLink = {
@@ -7,6 +13,8 @@ export type SocialLink = {
   href: string;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 };
+
+export const CTALINK: string = "https://calendly.com/mathiatv/30min";
 
 export const socialLinks: SocialLink[] = [
   {
@@ -78,10 +86,12 @@ export const blogPosts: BlogPost[] = [
     slug: "wie-is-mathia",
     category: "Uncategorized",
     title: "Wie is Mathia?",
-    excerpt: "Wie is Mathia? Social media had ik nodig. Ik startte mijn Twitch kanaal in september 2010, bij mijn ouders thuis aan een krakkehmikkig IKEA bureau met…",
+    excerpt:
+      "Wie is Mathia? Social media had ik nodig. Ik startte mijn Twitch kanaal in september 2010, bij mijn ouders thuis aan een krakkehmikkig IKEA bureau met…",
     date: "februari 28, 2026",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2026/02/mathia-als-presentratrice-in-2016-1024x576.avif",
+    image:
+      "/img/mathia-als-presentratrice-in-2016.avif",
     readTime: "5 min",
     tableOfContents: [
       { id: "social-media", label: "1. Social media had ik nodig" },
@@ -90,25 +100,45 @@ export const blogPosts: BlogPost[] = [
       { id: "doel", label: "4. Doel bereikt & toen..." },
     ],
     content: [
-      { type: "heading", level: 2, id: "social-media", text: "1. Social media had ik nodig" },
+      {
+        type: "heading",
+        level: 2,
+        id: "social-media",
+        text: "1. Social media had ik nodig",
+      },
       {
         type: "paragraph",
         html: "Ik startte mijn Twitch kanaal in september 2010, bij mijn ouders thuis aan een <strong>krakkehmikkig IKEA bureau</strong> met een simpele set-up.",
       },
       { type: "divider" },
-      { type: "heading", level: 2, id: "samenwerkingen", text: "2. Samenwerkingen door op te vallen" },
+      {
+        type: "heading",
+        level: 2,
+        id: "samenwerkingen",
+        text: "2. Samenwerkingen door op te vallen",
+      },
       {
         type: "paragraph",
         html: "Na een paar maanden kreeg ik al mijn eerste samenwerking. <strong>GRATIS SPULLEN?!</strong> Het was nog altijd 2014 en niemand had nog ooit gehoord van de term 'influencer'.",
       },
       { type: "divider" },
-      { type: "heading", level: 2, id: "fulltime", text: "3. Full-time streamen komt met een strategie" },
+      {
+        type: "heading",
+        level: 2,
+        id: "fulltime",
+        text: "3. Full-time streamen komt met een strategie",
+      },
       {
         type: "paragraph",
         html: "In 2016 kreeg ik mijn master diploma en besloot ik van <strong>deze hobby mijn werk</strong> te maken.",
       },
       { type: "divider" },
-      { type: "heading", level: 2, id: "doel", text: "4. Doel bereikt & toen..." },
+      {
+        type: "heading",
+        level: 2,
+        id: "doel",
+        text: "4. Doel bereikt & toen...",
+      },
       {
         type: "paragraph",
         html: "Ik wist dat ik graag andere bedrijven wilde helpen met hun strategie op social media.",
@@ -126,10 +156,12 @@ export const blogPosts: BlogPost[] = [
     slug: "uitbesteden-social-media",
     category: "Community Management",
     title: "Wat kost het uitbesteden van social media marketing?",
-    excerpt: "Wat kost het uitbesteden van social-media-marketing? Prijzen, factoren en slimme keuzes voor 2025. Sociale media zijn niet langer een bijzaak in de marketingmix; ze zijn…",
+    excerpt:
+      "Wat kost het uitbesteden van social-media-marketing? Prijzen, factoren en slimme keuzes voor 2025. Sociale media zijn niet langer een bijzaak in de marketingmix; ze zijn…",
     date: "september 24, 2025",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2025/09/uitbesteden-social-media-768x767.png",
+    image:
+      "/img/uitbesteden-social-media.png",
     readTime: "7 min",
     tableOfContents: [
       { id: "prijs", label: "Wat bepaalt de prijs?" },
@@ -137,7 +169,12 @@ export const blogPosts: BlogPost[] = [
       { id: "kiezen", label: "Zo kies je de beste manager" },
     ],
     content: [
-      { type: "heading", level: 2, id: "prijs", text: "Wat bepaalt de prijs van social media beheer?" },
+      {
+        type: "heading",
+        level: 2,
+        id: "prijs",
+        text: "Wat bepaalt de prijs van social media beheer?",
+      },
       {
         type: "paragraph",
         html: "Uit verschillende bronnen blijkt dat de prijzen voor het uitbesteden van social media marketing sterk uiteenlopen.",
@@ -151,14 +188,28 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       { type: "divider" },
-      { type: "heading", level: 2, id: "pakketten", text: "Onze social media pakketten" },
+      {
+        type: "heading",
+        level: 2,
+        id: "pakketten",
+        text: "Onze social media pakketten",
+      },
       {
         type: "list",
         ordered: true,
-        items: ["<strong>Strategiepakket – vanaf €140 per maand</strong>", "<strong>Basisbeheer – vanaf €417 per maand</strong>", "<strong>Maatwerk – vanaf €1.500 per maand</strong>"],
+        items: [
+          "<strong>Strategiepakket – vanaf €140 per maand</strong>",
+          "<strong>Basisbeheer – vanaf €417 per maand</strong>",
+          "<strong>Maatwerk – vanaf €1.500 per maand</strong>",
+        ],
       },
       { type: "divider" },
-      { type: "heading", level: 2, id: "kiezen", text: "Zo kies je de beste social media manager" },
+      {
+        type: "heading",
+        level: 2,
+        id: "kiezen",
+        text: "Zo kies je de beste social media manager",
+      },
       {
         type: "paragraph",
         html: "Met deze pakketten op een rij kun je gemakkelijk bepalen wat bij jou past.",
@@ -175,11 +226,14 @@ export const blogPosts: BlogPost[] = [
     id: 3,
     slug: "content-recyclen",
     category: "Social Media",
-    title: "Content recyclen slim aanpakken: zo bespaar je tijd én vergroot je zichtbaarheid",
-    excerpt: "Waarom content recyclen essentieel is voor jouw social media strategie? Content recyclen betekent dat je bestaande content in een nieuwe vorm opnieuw inzet. Denk…",
+    title:
+      "Content recyclen slim aanpakken: zo bespaar je tijd én vergroot je zichtbaarheid",
+    excerpt:
+      "Waarom content recyclen essentieel is voor jouw social media strategie? Content recyclen betekent dat je bestaande content in een nieuwe vorm opnieuw inzet. Denk…",
     date: "juni 5, 2025",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2024/08/tiny-video-opnemen-2-300x157.jpg",
+    image:
+      "/img/video-opnemen.jpg",
     // TODO: add readTime, tableOfContents, content when migrating from WordPress
   },
   {
@@ -187,21 +241,26 @@ export const blogPosts: BlogPost[] = [
     slug: "social-media-checklist",
     category: "Social Media",
     title: "Social Media Checklist",
-    excerpt: "Social media checklist om meer engagement en bereik te krijgen op social media? Dit stappenplan gaat iedere ondernemer helpen op wat verder komen met zijn…",
+    excerpt:
+      "Social media checklist om meer engagement en bereik te krijgen op social media? Dit stappenplan gaat iedere ondernemer helpen op wat verder komen met zijn…",
     date: "augustus 8, 2024",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2024/08/tiny-netwerkbijeenkomst-300x300.jpg",
+    image:
+      "/img/netwerkbijeenkomst.jpg",
     // TODO: add readTime, tableOfContents, content when migrating from WordPress
   },
   {
     id: 5,
     slug: "social-media-manager-inhuren",
     category: "Social Media Management",
-    title: "Voordelen van het inhuren van een Social Media Manager voor je bedrijf",
-    excerpt: "Een social media manager vergroot het bereik van je merk door samen te werken met influencers en thought leaders. Ze hebben expertise in het beheren van sociale media platforms.",
+    title:
+      "Voordelen van het inhuren van een Social Media Manager voor je bedrijf",
+    excerpt:
+      "Een social media manager vergroot het bereik van je merk door samen te werken met influencers en thought leaders. Ze hebben expertise in het beheren van sociale media platforms.",
     date: "december 21, 2023",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2024/02/Ontwerp-zonder-titel-4-1-1024x682.png",
+    image:
+      "/img/mathia-met-laptop.png",
     // TODO: add readTime, tableOfContents, content when migrating from WordPress
   },
   {
@@ -209,10 +268,12 @@ export const blogPosts: BlogPost[] = [
     slug: "community-management",
     category: "Community Management",
     title: "Community Management",
-    excerpt: "In deze blog lees je over de kracht van Community Management voor merkengagement en groei, & deel mijn visie over een effectieve social media strategie.",
+    excerpt:
+      "In deze blog lees je over de kracht van Community Management voor merkengagement en groei, & deel mijn visie over een effectieve social media strategie.",
     date: "september 18, 2023",
     comments: "Geen reacties",
-    image: "https://mathia.nl/wp-content/uploads/2023/09/Linkedin-posrt-300x169.png",
+    image:
+      "/img/linkedin-post.png",
     // TODO: add readTime, tableOfContents, content when migrating from WordPress
   },
 ];
@@ -220,3 +281,8 @@ export const blogPosts: BlogPost[] = [
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+
+export const email = {
+  href: "mailto:contact@mathia.nl",
+  label: "contact@mathia.nl",
+};

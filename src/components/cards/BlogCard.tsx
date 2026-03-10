@@ -10,7 +10,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       {/* Image */}
       <div className="relative aspect-video overflow-hidden bg-muted">
         <Image src={post.image} alt={post.title} loading="lazy" width={600} height={600} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
-        <span className="absolute right-2 top-2 rounded-full bg-primary px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white">{post.category}</span>
+        <span className="absolute right-2 top-2 rounded-full bg-secondary-accent px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-white">{post.category}</span>
         {/* Avatar bubble */}
         <div className="absolute bottom-4 left-4 h-12 w-12 overflow-hidden rounded-full border-2 border-white bg-secondary">
           <Image src="/img/profile.png" alt="Mathia" fill className="h-full w-full object-cover" />
@@ -20,7 +20,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       {/* Body */}
       <div className="flex flex-1 flex-col px-4 pb-3 pt-6">
         <Link href={slug}>
-          <h3 className="mb-2 text-base font-semibold leading-snug text-secondary-accent transition-all duration-150 hover:text-(--secondary-accent/80)">{post.title}</h3>
+          <h3 className="mb-2 text-base font-semibold leading-snug text-primary transition-all duration-150 hover:text-(--secondary-accent/80)">{post.title}</h3>
         </Link>
         <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
         <Link

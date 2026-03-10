@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Aanbod() {
   return (
-    <main className="">
+    <main>
       <AanbodSection />
       <ExtendedServicesSections />
     </main>

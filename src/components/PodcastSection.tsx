@@ -13,7 +13,7 @@ export default function PodcastSection() {
             </h4>
             <div className="relative w-full rounded-xl overflow-hidden">
               <Image
-                src="https://mathia.nl/wp-content/uploads/2026/02/selfie-podcast-opname-studio-caroline-en-mathi-768x577.jpg"
+                src="/img/selfie-podcast-opname-studio.jpg"
                 alt="Podcast opname studio"
                 width={500}
                 height={375}
@@ -26,7 +26,7 @@ export default function PodcastSection() {
           <div className="w-full sm:w-1/2 flex items-center justify-center">
             <div className="relative w-full max-w-[320px] sm:max-w-none rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="https://mathia.nl/wp-content/uploads/2026/02/podcast-artwork-seizoen-3-768x768.png"
+                src="/img/podcast-artwork-seizoen-3.png"
                 alt="Podcast artwork seizoen 3"
                 width={500}
                 height={500}

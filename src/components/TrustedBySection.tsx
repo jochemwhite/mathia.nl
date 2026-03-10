@@ -7,47 +7,47 @@ const companies = [
   {
     company: "Red Bull",
     href: "https://www.redbull.com/nl-nl",
-    img: "https://mathia.nl/wp-content/uploads/2024/02/red-bull.png",
+    img: "/img/trusted-companys/redbull.png",
   },
   {
     company: "Context Consultancy",
     href: "https://context-consultancy.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2024/02/Context-Consultancy.jpg-1-1.png",
+    img: "/img/trusted-companys/context-consultancy.png",
   },
   {
     company: "Lengua Viva",
     href: "https://www.lenguaviva.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2025/05/Logo_LengiaViva-07-1024x845.png",
+    img: "/img/trusted-companys/lengiaviva.png",
   },
   {
     company: "Birdwatcher Group",
     href: "https://www.birdwatchergroup.com/",
-    img: "https://mathia.nl/wp-content/uploads/2024/08/BWG_logo_dark-orange.png",
+    img: "/img/trusted-companys/birdwatchergroup.png",
   },
   {
     company: "De Federatie",
     href: "https://www.defederatie.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2024/02/Logo_DeFederatie.png",
+    img: "/img/trusted-companys/defederatie.png",
   },
   {
     company: "Bremax Bouw",
     href: "https://www.bremaxbouw.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2024/02/Logo-Bremax-2-1024x586.png",
+    img: "/img/trusted-companys/bremax.png",
   },
   {
     company: "Redtail Services",
     href: "https://redtailservices.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2025/05/Redtail-Services_10_final_08012019.bmp",
+    img: "/img/trusted-companys/redtail-services.bmp",
   },
   {
     company: "Niveau VBS",
     href: "https://www.niveau-vbs.nl/",
-    img: "https://mathia.nl/wp-content/uploads/2025/05/Niveau-logo-1024x196.png",
+    img: "/img/trusted-companys/niveau.png",
   },
   {
     company: "Durven Zijn",
     href: "https://www.durvenzijn.nu/",
-    img: "https://mathia.nl/wp-content/uploads/elementor/thumbs/PP-Murraij-boek-3d-schaduw-2-1-rjq90i1oybb8uepqq3uvsc26f0oxd8httphe5cto8w.png",
+    img: "/img/trusted-companys/durven-zijn.png",
   },
 ];
 

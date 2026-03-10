@@ -5,7 +5,7 @@ import CTAButton from "./buttons/cta";
 export default function AcademySection() {
   return (
     <section className="overflow-hidden py-32">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
+      <div className="container flex flex-col md:flex-row items-stretch">
         {/* Text */}
         <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 md:px-12 py-12 sm:py-16">
           <p className="lato text-sm font-bold mb-4 sm:mb-6 text-primary">#MathiaAcademy</p>
@@ -27,7 +27,7 @@ export default function AcademySection() {
 
         {/* Image */}
         <div className="w-full md:flex-1 relative min-h-[280px] sm:min-h-[380px] md:min-h-[520px]">
-          <Image src="https://mathia.nl/wp-content/uploads/2025/09/uitbesteden-social-media-1024x1024.png" alt="Mathia Academy" fill className="object-cover object-top rounded-lg" />
+          <Image src="/img/uitbesteden-social-media.png" alt="Mathia Academy" fill className="object-cover object-top rounded-lg" />
         </div>
       </div>
     </section>

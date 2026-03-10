@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CTAButton from "./buttons/cta";
+import { CTALINK } from "../lib/const";
 
 export default function SocialMediaBeheer() {
   const included = [
@@ -15,12 +16,12 @@ export default function SocialMediaBeheer() {
 
   return (
     <section className="px-4 sm:px-6 md:px-12 py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="container">
         <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
           {/* Image + CTA */}
           <div className="w-full md:w-[45%] shrink-0">
             <Image
-              src="https://mathia.nl/wp-content/uploads/2025/09/uitbesteden-social-media-768x767.png"
+              src="/img/uitbesteden-social-media.png"
               alt="Social media uitbesteden"
               width={768}
               height={767}
@@ -28,7 +29,7 @@ export default function SocialMediaBeheer() {
               className="rounded-xl w-full h-auto object-cover"
             />
             <div className="flex justify-center md:justify-end mt-4">
-              <CTAButton href="https://calendly.com/mathiatv/30min" text="Plan je gratis kennismakingsgesprek" />
+              <CTAButton href={CTALINK} text="Plan je gratis kennismakingsgesprek" />
             </div>
           </div>
 

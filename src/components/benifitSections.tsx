@@ -11,7 +11,7 @@ export default function BenefitSection() {
 
   return (
     <section className="px-4 sm:px-6 md:px-12 mt-12 sm:mt-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="container">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 text-primary">
           {/* Text */}
           <div className="w-full md:w-1/2">
@@ -39,7 +39,7 @@ export default function BenefitSection() {
           {/* Image */}
           <div className="w-full md:w-1/2">
             <Image
-              src="https://mathia.nl/wp-content/uploads/2026/02/klant-resultaten-facebook-2025.jpeg"
+              src="/img/klant-resultaten-facebook-2025.jpeg"
               alt="Klant resultaten Facebook 2025"
               width={1200}
               height={800}

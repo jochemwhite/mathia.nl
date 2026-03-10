@@ -1,5 +1,7 @@
 import ContactForm from "@/src/components/forms/ContactForm";
+import { email } from "@/src/lib/const";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-secondary  ">
+    <main>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-primary">
         {/* Header */}
         <div className="mb-8 sm:mb-10">
@@ -29,12 +31,12 @@ const ContactPage: React.FC = () => {
         {/* Bottom note */}
         <p className="lato text-xs text-center text-gray-400 mt-5 sm:mt-6">
           Of stuur direct een e-mail naar{" "}
-          <a href="mailto:contact@mathia.nl" className="text-secondary-accent font-semibold hover:underline">
-            contact@mathia.nl
-          </a>
+          <Link href={email.label} className="text-secondary-accent font-semibold hover:underline">
+            {email.label}
+          </Link>
         </p>
       </div>
-    </div>
+    </main>
   );
 };
 
