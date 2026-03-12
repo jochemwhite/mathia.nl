@@ -1,5 +1,4 @@
 export type ActionResponse<T> = {
-  success: true;
+  success: boolean;
   data: T;
-  error?: undefined;
 };
