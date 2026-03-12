@@ -1,22 +1,14 @@
 "use client";
 
+// import { submitEbookForm } from "@/src/actions/forms";
+import { Button } from "@/src/components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/src/components/ui/form";
+import { Input } from "@/src/components/ui/input";
+import { ebookSchema, EbookSchema } from "@/src/schemas/ebook";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ebookSchema, EbookSchema } from "@/src/schemas/ebook";
-import { Input } from "@/src/components/ui/input";
-import { Button } from "@/src/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/src/components/ui/form";
-import { submitEbookForm } from "@/src/actions/forms";
 import FormSubmission from "../modals/ebookFormSubmission";
-import { Spinner } from "@/src/components/ui/spinner";
 
 export default function EbookForm() {
   const [loading, setLoading] = useState(false);
@@ -31,16 +23,7 @@ export default function EbookForm() {
   });
 
   async function onSubmit(data: EbookSchema): Promise<void> {
-    setLoading(true);
-    const response = await submitEbookForm(data);
-    if (response.success) {
-      setLoading(false);
-      form.reset();
-      setOpen(true);
-    } else {
-      setLoading(false);
-      console.error(response.error);
-    }
+    // TODO: implement submitEbookForm
   }
 
   return (
@@ -73,11 +56,7 @@ export default function EbookForm() {
               </FormItem>
             )}
           />
-          <Button
-            type="submit"
-            className="bg-secondary-accent cursor-pointer hover:bg-secondary-accent/80"
-            disabled={loading}
-          >
+          <Button type="submit" className="bg-secondary-accent cursor-pointer hover:bg-secondary-accent/80" disabled={loading}>
             {/* {loading && <Spinner />} */}
             ONTVANG DE TIPS
           </Button>

@@ -23,7 +23,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Alert, AlertDescription } from "../ui/alert";
-import { submitContactForm } from "@/src/actions/forms";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -38,12 +37,8 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data: ContactFormValues): Promise<void> => {
-    const response = await submitContactForm(data);
-    if (response.success) {
-      form.reset();
-      setSubmitted(true);
-    } else {
-      console.error(response.error);
+    // TODO: implement submitContactForm
+    console.log(data);
     }
   };
 

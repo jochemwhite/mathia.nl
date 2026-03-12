@@ -13,7 +13,7 @@ export default function ServicesSection() {
     {
       title: "Social Media Management",
       image: "/img/mathia-met-laptop-open.png",
-      href: "/social-media-management",
+      href: "/social-media-beheer",
     },
     {
       title: "Strategie Sessies",

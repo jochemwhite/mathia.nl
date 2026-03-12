@@ -5,20 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 
-@theme {
-  --container-max-width: 80rem;    /* sets max-width */
-  --container-padding: 1.5rem;     /* horizontal padding */
-}
+
 
 @theme {
-  --container-padding: 1rem;
-  --container-max-width: 80rem;
+  --breakpoint-2xl: 80rem
 }
 
-@layer utilities {
-  .container {
-    margin-inline: auto;
-  }
+@utility container {
+  margin-inline: auto; /* Centers it (mx-auto) */
+  padding-inline: 2rem; /* Adds side padding (px-8) */
 }
 
 

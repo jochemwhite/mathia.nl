@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <Separator className="mx-auto max-w-7xl my-10 bg-secondary-foreground/20" />
+      <Separator className="my-10 bg-secondary-foreground/20" />
       <div className="container mt-10 text-center text-secondary-foreground text-sm flex flex-row justify-between">
         <p>Copyright © {currentYear} Mathia.nl</p>
         <p>
